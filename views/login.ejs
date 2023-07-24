@@ -1,0 +1,121 @@
+
+<% if (messages.error) { %>
+  <%= messages.error %>
+<% } %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <h1>Login</h1>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Album</title>
+  
+</head>
+<body id="body">
+  <style>
+    #body{
+    
+    display: flex;
+    justify-content: center;
+    background: url('../img5.jpg');
+}
+h1{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 70px;
+}
+
+#form{
+    top: 200px; 
+    text-align: center;
+    border-radius: 10px;
+    padding-top:10px ;
+    padding-bottom:10px ;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: absolute;
+}
+#email, #password{
+  height: 45px;
+    width: 80%;
+    margin-bottom:15px ;
+    border: 1px solid black;
+    border-radius: 30px;
+    color: #000;
+    
+    font-size: 5px;
+    padding: 0 0 0 45px;
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+    font-size: 15px;
+    transition: 400ms;
+}
+#email:hover{
+    width: 50%;
+    transition-duration: 500ms;
+}
+#password:hover{
+    width: 50%;
+    transition-duration: 500ms;
+}
+#submit{border: none;
+        border-radius: 30px;
+        font-size: 15px;
+        height: 45px;
+        outline: none;
+        width: 4cm;
+        color: black;
+        cursor: pointer;
+        transition: .7s ;
+    }
+#register
+    {
+      margin-top: 20px;
+      font-size: 20px;
+      font-family: cursive;
+      width: 3cm;
+      height: 1.3cm;
+      border-radius: 30px;
+      transition: .9s  } 
+p{
+  font-weight: bold;
+  font-size: larger;
+}   
+#form #submit:hover{
+    
+    
+    transition-duration: 750ms;
+    width: 6cm;
+    background-color: #fbff28;
+}
+#register:hover
+  {
+    
+    transition-duration: 1250ms;
+    width: 6.3cm;
+    background:linear-gradient(to right ,rgb(141, 192, 255) , rgb(255, 173, 173) );
+   
+
+}
+
+
+</style>
+
+  <div id="form">
+  <form action="/login" method="POST">
+  
+    <div>
+      <label for="email">Username</label>
+      <input placeholder="Username"  id="email" name="email" required>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input placeholder="Password" type="password" id="password" name="password" required>
+    </div>
+    <button id="submit" type="submit">Login</button>
+  </form>
+  <p>Don't have an account?</p><p>Register Now!⬇️⬇️⬇️😊</p><a id="register" href="/register"><button id="register">Register</button></buttonRegister></a>
+  </div>
+</body>
+</html>
+
